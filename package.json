@@ -1,0 +1,22 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "tdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianadiasds/js-tdd.git"
+  },
+  "keywords": [
+    "tdd"
+  ],
+  "author": "Diana Dias <dianadiasds@gmail.com> (http://www.dianadias.tech/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dianadiasds/js-tdd/issues"
+  },
+  "homepage": "https://github.com/dianadiasds/js-tdd#readme"
+}
