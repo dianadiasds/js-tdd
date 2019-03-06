@@ -1,45 +1,43 @@
 {
-  "name": "spotify-wrapper",
+  "name": "js-tdd",
   "version": "1.0.0",
-  "description": "spotify-wrapper",
+  "description": "tdd",
   "main": "index.js",
   "scripts": {
-    "prepush": "npm run test:coverage",
-    "test": "./node_modules/.bin/mocha tests/main.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha tests/main.spec.js --require babel-register --watch",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/.bin/mocha tests/fizzbuzz.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/fizzbuzz.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
     "functions": 80,
     "lines": 80,
     "check-coverage": true,
-    "reporter": [
-      "text",
-      "html"
-    ],
-    "exclude": [
-      "tests/**"
-    ]
+    "reporter": ["text", "html"],
+    "exclude": ["tests/**"]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dianadiasds/spotify-wrapper.git"
+    "url": "git+https://github.com/dianadiasds/js-tdd.git"
   },
   "keywords": [
-    "spotify"
+    "tdd"
   ],
   "author": "Diana Dias <dianadiasds@gmail.com> (http://www.dianadias.tech/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dianadiasds/spotify-wrapper/issues"
+    "url": "https://github.com/dianadiasds/js-tdd/issues"
   },
-  "homepage": "https://github.com/dianadiasds/spotify-wrapper#readme",
+  "homepage": "https://github.com/dianadiasds/js-tdd#readme",
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0"
-  },
-  "dependencies": {}
+  }
 }
